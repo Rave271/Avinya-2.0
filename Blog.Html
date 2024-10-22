@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savory Stories Blog</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+    .cedarville-cursive-regular {
+      font-family: "Cedarville Cursive", cursive;
+    }
+
+    #background-video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+      transform: translate(-50%, -50%);
+    }
+
+    .main {
+      height: fit-content;
+      width: 70%;
+    }
+
+    .box {
+      height: auto;
+      width: 750px;
+      background-color: rgb(255, 255, 255);
+      opacity: 0.85;
+      position: absolute;
+      z-index: 11000;
+      padding: 20px;
+    }
+
+    .comment-section {
+      margin-top: 50px;
+    }
+
+    .comment-box {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: white;
+      color: black;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <video autoplay muted loop id="background-video">
+    <source src="bgfilm.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-black cedarville-cursive-regular" style="background-color: black;">
+    <div class="container-fluid">
+      <a style="color: white;" class="navbar-brand" href="#"><img src=".\logo.jpeg" alt="logo" width="30px">Savory Stories</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a style="color: white;" class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: white;" class="nav-link" href="#">1</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: white;" class="nav-link" href="#">2</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carousel -->
+  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="f4.jpg" class="d-block w-100" alt="..." height="500px">
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="f2.jpg" class="d-block w-100" alt="..." height="500px">
+      </div>
+      <div class="carousel-item">
+        <img src="f3.jpg" class="d-block w-100" alt="..." height="500px">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <center><h1 style="color: white; margin: 10px;" class="cedarville-cursive-regular">Popular Recipes</h1></center>
+
+  <!-- Blog Post Cards -->
+  <div class="main container text-center">
+    <div class="row">
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="f5.jpg" class="card-img-top" alt="Coffee" height="200px">
+          <div class="card-body">
+            <h5 class="card-title">Coffee</h5>
+            <a href="#" class="btn btn-dark">Comments</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="b1.jpg" class="card-img-top" alt="Burgers" height="200px">
+          <div class="card-body">
+            <h5 class="card-title">Burgers</h5>
+            <a href="#" class="btn btn-dark">Comments</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="b2.jpg" class="card-img-top" alt="Dosa" height="200px">
+          <div class="card-body">
+            <h5 class="card-title">Dosa</h5>
+            <a href="#" class="btn btn-dark">Comments</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- Comment Section -->
+    <div class="comment-section">
+      <center><h2>Welcome to the comment section</h2></center>
+      <div class="box mx-auto">
+        <input id="Name" type="text" name="text" placeholder="Your Name" class="form-control mb-3" style="width: 80%;">
+        <textarea id="Comment" class="form-control mb-3" rows="4" placeholder="Write your comment..." aria-label="Write your comment"></textarea>
+        <button id="btn1" class="btn btn-primary" style="width: 150px;">Submit</button>
+      </div>
+
+      <div id="commentsDisplay" class="mt-3"></div>
+    </div>
+  </div>
+
+  <footer>
+    <img src="logo.jpeg" alt="wheel" width="40px"><b>Savory Stories</b><br>
+    Contact us for any complaints<br>Copyright @2024
+  </footer>
+
+  <script src="Textarea.js"></script>
+
+</body>
+</html>
